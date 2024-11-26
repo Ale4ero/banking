@@ -5,24 +5,34 @@ import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Footer from './Footer'
 // import Footer from './Footer'
 // import PlaidLink from './PlaidLink'
 
 const Sidebar = ({ user }: SiderbarProps) => {
   const pathname = usePathname();
 
+
   return (
     <section className="sidebar">
       <nav className="flex flex-col gap-4">
         <Link href="/" className="mb-12 cursor-pointer flex items-center gap-2">
           <Image 
-            src="/icons/logo.svg"
-            width={34}
-            height={34}
+            src="/icons/pocketChangeLogo.svg"
+            width={250}
+            height={33}
             alt="Horizon logo"
-            className="size-[24px] max-xl:size-14"
+            className="sidebar-logo max-xl: size-250"
           />
-          <h1 className="sidebar-logo">PocketChange</h1>
+
+          <Image 
+            src={"icons/pocketChangeIcon.svg"}
+            width={50}
+            height={50}
+            alt="PocketChange Icon"
+            className={'xl:hidden'}
+          />
+          {/* <h1 className="sidebar-logo">PocketChange</h1> */}
         </Link>
 
         {sidebarLinks.map((item) => {
@@ -52,7 +62,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
         {/* <PlaidLink user={user} /> */}
       </nav>
 
-      {/* <Footer user={user} /> */}
+      <Footer user={user} />
     </section>
   )
 }

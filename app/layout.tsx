@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   title: "PocketChange",
   description: "PocketChange is a modern banking platform for cool people.",
   icons: {
-    icon: '/icons/logo.svg'
+    icon: '/icons/pocketChangeIcon.svg'
   }
 };
 
